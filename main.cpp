@@ -15,8 +15,8 @@ int main()
 		 
 		//if (fichier)
 		//{
-		//	int k; // notre variable où sera stocké le caractère
-			//fichier.get(k);  // on lit un caractère et on le stocke dans caractere
+		//	int k; // notre variable oï¿½ sera stockï¿½ le caractï¿½re
+			//fichier.get(k);  // on lit un caractï¿½re et on le stocke dans caractere
 			//cout << k;  // on l'affiche
 
 
@@ -26,6 +26,7 @@ int main()
 			//cout << "put the size of the imput sequence : " << endl;
 			//cin >> userSize;
 					
+			
 			double T[5] = { 4, 2, 6, 1, 9 };
 			cout << "avant le tri : " << endl;
 			for (int i = 0; i < 5; i++)
@@ -41,7 +42,7 @@ int main()
 			//	cout << T[i] << endl;
 			//}
 
-			quickSort(T, 0, 4);
+			T = quickSort(T, 0, 4);
 			cout << "apres le tri rapide : " << endl;
 			for (int i = 0; i < 5; i++)
 			{

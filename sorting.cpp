@@ -4,7 +4,7 @@
 #include "sorting.h"
 
 
-void tri_insertion(double T[], int n)  // n taille
+double *tri_insertion(double T, int n)  // n taille
 {
 	int i, j;
 	for (i = 1; i < n; i++)
@@ -15,14 +15,15 @@ void tri_insertion(double T[], int n)  // n taille
 		T[j] = x;
 
 	}
-	return 
+	return T;
 }
-void quickSort(double T[], int left, int right) {
+
+double *quickSort(double T[], int left, int right) {
 	int i = left, j = right;
 	int tmp;
 	int pivot = T[(left + right) / 2];
 
-	/* partition */
+	//partition
 	while (i <= j) {
 		while (T[i] < pivot)
 			i++;
@@ -38,10 +39,11 @@ void quickSort(double T[], int left, int right) {
 		}
 	};
 
-	/* recursion */
+	//recursion
 	if (left < j)
 		quickSort(T, left, j);
 	if (i < right)
 		quickSort(T, i, right);
-	return
+	
+	return T;
 }
