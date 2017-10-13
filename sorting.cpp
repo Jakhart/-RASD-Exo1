@@ -3,7 +3,8 @@
 #include <fstream>
 #include "sorting.h"
 
-
+///Une 
+/*This part regroup the two different methods we use in order to sort a sequence of value.*/
 double *tri_insertion(double T, int n)  // n taille
 {
 	int i, j;
