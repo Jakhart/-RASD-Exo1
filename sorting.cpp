@@ -3,9 +3,9 @@
 #include <fstream>
 #include "sorting.h"
 
-///Une 
+///Une methode
 /*This part regroup the two different methods we use in order to sort a sequence of value.*/
-double *tri_insertion(double T, int n)  // n taille
+double *tri_insertion(double T, int n)  // n taille de la chaine
 {
 	int i, j;
 	for (i = 1; i < n; i++)
@@ -19,7 +19,7 @@ double *tri_insertion(double T, int n)  // n taille
 	return T;
 }
 
-double *quickSort(double T[], int left, int right) {
+/*double *quickSort(double T[], int left, int right) {
 	int i = left, j = right;
 	int tmp;
 	int pivot = T[(left + right) / 2];
@@ -47,4 +47,4 @@ double *quickSort(double T[], int left, int right) {
 		quickSort(T, i, right);
 	
 	return T;
-}
+}*/
