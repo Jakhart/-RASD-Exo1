@@ -2,5 +2,5 @@
 #include <iostream>
 #include <fstream>
 
-double *tri_insertion(double T[], int n);
-//double *quickSort(double T[], int left, int right);
+void tri_insertion(double *T, int n);
+void quickSort(double *T, int left, int right);
