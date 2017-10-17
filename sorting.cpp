@@ -8,7 +8,7 @@
 void tri_insertion(double *T, int n, int *I) // n taille de la chaine
 {
 	for (int k = 0; k < n; k++)
-		I[k] = k+1;
+		I[k] = k + 1;
 	int i, j;
 	for (i = 1; i < n; i++)
 	{
@@ -25,10 +25,16 @@ void tri_insertion(double *T, int n, int *I) // n taille de la chaine
 	}
 };
 
-void quickSort(double *T, int left, int right)
+void quickSort(double *T, int left, int right, int *I, int ini)
 {
+	if (ini == 0)
+	{
+		for (int k = 0; k < right+1; k++)
+			I[k] = k + 1;
+	}
 	int i = left, j = right;
 	int tmp;
+	int tmp2;
 	int pivot = T[(left + right) / 2];
 
 	//partition
@@ -41,8 +47,11 @@ void quickSort(double *T, int left, int right)
 		if (i <= j)
 		{
 			tmp = T[i];
+			tmp2 = I[i];
 			T[i] = T[j];
+			I[i] = I[j];
 			T[j] = tmp;
+			I[j] = tmp2;
 			i++;
 			j--;
 		}
@@ -50,7 +59,13 @@ void quickSort(double *T, int left, int right)
 
 	//recursion
 	if (left < j)
-		quickSort(T, left, j);
+	{
+		ini++;
+		quickSort(T, left, j, I, ini);
+	}
 	if (i < right)
-		quickSort(T, i, right);
+	{
+		ini++;
+		quickSort(T, i, right, I, ini);
+	}
 }

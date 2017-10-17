@@ -13,6 +13,7 @@ int main()
 	cin >> n;
 	cout << "Fill the Array:" << endl;
 	double T[n];
+	int I[n];
 	for (int i = 0; i < n; i++)
 	{
 		cin >> T[i];
@@ -23,9 +24,23 @@ int main()
 	{
 		cout << T[i] << endl;
 	}
-	int I[n];
+
+	int m;
+	cout << "Which function do you want to use? " << endl;
+	cout << "tri insertion = 0" << endl;
+	cout << "Quicksort = 1" << endl;
+	cin >> m;
+	
+	if (m ==0)
+	{
+	
 	tri_insertion(T, n, I);
-	//T = quickSort(T, 0, 4);
+	}
+	else if (m==1)
+	quickSort(T, 0, n-1, I, 0);
+
+	else 
+	cout << "wrong imput" << endl;
 
 	cout << "apres le tri : " << endl;
 	for (int i = 0; i < n; i++)
