@@ -25,13 +25,14 @@ void tri_insertion(double *T, int n, int *I) // n taille de la chaine
 	}
 };
 
-void quickSort(double *T, int left, int right, int *I, int ini)
+void quickSort(double*T, int left, int right, int *I){
+	for (int k = 0; k < right+1; k++)
+		I[k] = k + 1;
+	quick(T, left, right, I);
+};
+
+void quick(double *T, int left, int right, int *I)
 {
-	if (ini == 0)
-	{
-		for (int k = 0; k < right+1; k++)
-			I[k] = k + 1;
-	}
 	int i = left, j = right;
 	int tmp;
 	int tmp2;
@@ -60,12 +61,10 @@ void quickSort(double *T, int left, int right, int *I, int ini)
 	//recursion
 	if (left < j)
 	{
-		ini++;
-		quickSort(T, left, j, I, ini);
+		quick(T, left, j, I);
 	}
 	if (i < right)
 	{
-		ini++;
-		quickSort(T, i, right, I, ini);
+		quick(T, i, right, I);
 	}
 }

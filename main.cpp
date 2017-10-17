@@ -37,7 +37,7 @@ int main()
 	tri_insertion(T, n, I);
 	}
 	else if (m==1)
-	quickSort(T, 0, n-1, I, 0);
+	quickSort(T, 0, n-1, I);
 
 	else 
 	cout << "wrong imput" << endl;
