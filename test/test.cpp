@@ -1,16 +1,16 @@
 #include <stdio.h>
 #include <iostream>
 #include <fstream>
-#include "sorting.h"
+#include "../library/sorting.h"
 #include <vector>
 
 using namespace std;
 
 int main()
 {	
-	n = 5
+	int n = 5;
     double T[] = {4, 2, 6, 1, 9};
-    double I[5]
+	int I[5];
 	cout << "avant le tri : " << endl;
 	for (int i = 0; i < n; i++)
 	{
@@ -37,8 +37,9 @@ int main()
 	cout << "ordre initial : " << endl;	
 	for (int i = 0; i < n; i++)
 	{
-		cout << I[i] << endl;
+		cout << I[i] << " ";
 	};
+	cout << endl;
 
 	return 0;
 }

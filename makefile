@@ -1,11 +1,16 @@
 CCP=g++
 
 compile:
-	$(CCP) sorting.cpp sorting.h main.cpp -o runMe.exe
+	$(CCP) library/sorting.cpp library/sorting.h test/main.cpp -o executable/runMe.exe
 
 test:
-	$(CCP) sorting.cpp sorting.h test.cpp -o runMe.exe
+	$(CCP) library/sorting.cpp library/sorting.h test/test.cpp -o executable/runMe.exe
 
 run:
-	./runMe.exe
+	./executable/runMe.exe
+
+prof:
+	$(CCP) -pg library/sorting.cpp library/sorting.h test/test.cpp -o executable/runMe.exe
+	./executable/runMe.exe
+	gprof executable/runMe.exe  gmon.out | gprod2dot/gprof2dot.py | dot -Tpng -o output.png
 

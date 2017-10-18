@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <fstream>
-#include "sorting.h"
+#include "../library/sorting.h"
 #include <vector>
 
 using namespace std;
