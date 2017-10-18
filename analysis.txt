@@ -47,8 +47,10 @@ notice and this notice are preserved.
 granularity: each sample hit covers 4 byte(s) no time propagated
 
 index % time    self  children    called     name
+                                 162             quick(double*, int, int, int*) [2]
                 0.00    0.00       1/1           quickSort(double*, int, int, int*) [3]
-[2]      0.0    0.00    0.00       1         quick(double*, int, int, int*) [2]
+[2]      0.0    0.00    0.00       1+162     quick(double*, int, int, int*) [2]
+                                 162             quick(double*, int, int, int*) [2]
 -----------------------------------------------
                 0.00    0.00       1/1           _fu15___ZSt3cin [98]
 [3]      0.0    0.00    0.00       1         quickSort(double*, int, int, int*) [3]
@@ -146,4 +148,3 @@ notice and this notice are preserved.
 Index by function name
 
    [2] quick(double*, int, int, int*) [3] quickSort(double*, int, int, int*)
-

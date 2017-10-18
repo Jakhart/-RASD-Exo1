@@ -2,15 +2,21 @@
 #include <iostream>
 #include <vector>
 #include <fstream>
+#include <stdlib.h>
+#include<time.h>
 #include "../library/sorting.h"
 
 using namespace std;
 
 int main()
 {	
-	int n = 5;
-    double T[] = {4, 2, 6, 1, 9};
-	int I[5];
+    int c=1000;
+    int d=100;
+    srand(time(NULL));
+    int n = rand()%c;
+    double T[n];
+    for (int i=0; i<n; i++) T[i] = rand()%d;
+	int I[n];
 	cout << "avant le tri : " << endl;
 	for (int i = 0; i < n; i++)
 	{

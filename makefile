@@ -6,11 +6,14 @@ compile:
 test:
 	$(CCP) library/sorting.cpp library/sorting.h test/test.cpp -o executable/runMe.exe
 
+random:
+	$(CCP) library/sorting.cpp library/sorting.h test/random.cpp -o executable/runMe.exe
+
 run:
 	./executable/runMe.exe
 
 prof:
-	$(CCP) -pg library/sorting.cpp library/sorting.h test/test.cpp -o executable/runMe.exe
+	$(CCP) -pg library/sorting.cpp library/sorting.h test/random.cpp -o executable/runMe.exe
 	./executable/runMe.exe
-	gprof executable/runMe.exe  gmon.out | gprod2dot/gprof2dot.py | dot -Tpng -o output.png
+	gprof executable/runMe.exe  gmon.out &gt; analysis.txt
 
