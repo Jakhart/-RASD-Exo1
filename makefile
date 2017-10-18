@@ -15,5 +15,5 @@ run:
 prof:
 	$(CCP) -pg library/sorting.cpp library/sorting.h test/random.cpp -o executable/runMe.exe
 	./executable/runMe.exe
-	gprof executable/runMe.exe  gmon.out &gt; analysis.txt
+	gprof executable/runMe.exe gmon.out &gt; analysis.txt
 
