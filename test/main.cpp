@@ -7,9 +7,10 @@
 using namespace std;
 
 int main()
-{	
-	int n;	
-	cout << "size of the Array:" << endl;
+{
+	//Initialisation by the user
+	int n;
+	cout << "Size of the Array:" << endl;
 	cin >> n;
 	cout << "Fill the Array:" << endl;
 	double T[n];
@@ -18,41 +19,63 @@ int main()
 	{
 		cin >> T[i];
 	};
-	//double T[] = {4, 2, 6, 1, 9};
-	cout << "avant le tri : " << endl;
+
+	//Display
+	cout << "Before sorting : " << endl;
 	for (int i = 0; i < n; i++)
 	{
 		cout << T[i] << endl;
 	}
 
+	//Fonction choice by the user
 	int m;
+	double duration;
 	cout << "Which function do you want to use? " << endl;
 	cout << "tri insertion = 0" << endl;
 	cout << "Quicksort = 1" << endl;
 	cin >> m;
-	
-	if (m ==0)
+	do
 	{
-	
-	tri_insertion(T, n, I);
-	}
-	else if (m==1)
-	quickSort(T, 0, n-1, I);
+		if (m == 0)
+		{
+			auto start = clock();
+			tri_insertion(T, n, I);
+			duration = (clock() - start) / (double)CLOCKS_PER_SEC;
+			break;
+		}
+		else if (m == 1)
+		{
+			auto start = clock();
+			quickSort(T, 0, n - 1, I);
+			duration = (clock() - start) / (double)CLOCKS_PER_SEC;
+			break;
+		}
+		else
+		{
+			cout << "Wrong imput" << endl;
+			cout << "Which function do you want to use? " << endl;
+			cout << "tri insertion = 0" << endl;
+			cout << "Quicksort = 1" << endl;
+			cin >> m;
+		}
+	} while (true);
 
-	else 
-	cout << "wrong imput" << endl;
-
-	cout << "apres le tri : " << endl;
+	//Displays
+	cout << "After the sorting : " << endl;
 	for (int i = 0; i < n; i++)
 	{
-		cout << T[i] << endl;
+		cout << T[i] << " ";
 	};
+	cout << endl;
 
-	cout << "ordre initial : " << endl;	
+	cout << "Initial order : " << endl;
 	for (int i = 0; i < n; i++)
 	{
-		cout << I[i] << endl;
+		cout << I[i] << " ";
 	};
+	cout << endl;
+
+	cout << "Time of the fonction (s) : " << begin - end + 1;
 
 	return 0;
 }
