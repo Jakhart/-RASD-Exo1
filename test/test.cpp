@@ -11,7 +11,11 @@ int main()
 	//Initialisation
 	int n = 5;
 <<<<<<< HEAD
+<<<<<<< HEAD
     double T[] = {4, 2, 6, 100000000000000, 9};
+=======
+	double T[] = {4, 2, 6, 1, 9};
+>>>>>>> 1a21ebb23621f882e321f83cf07f502bda1d45a2
 =======
 	double T[] = {4, 2, 6, 1, 9};
 >>>>>>> 1a21ebb23621f882e321f83cf07f502bda1d45a2
