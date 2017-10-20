@@ -9,18 +9,6 @@
 using namespace std;
 
 int main()
-<<<<<<< HEAD
-<<<<<<< HEAD
-{	
-    int c=100000000;
-    int d=1000;
-    srand(time(NULL));
-    int n = rand()%c;
-    double T[n];
-    for (int i=0; i<n; i++) T[i] = rand()%d;
-=======
-=======
->>>>>>> 1a21ebb23621f882e321f83cf07f502bda1d45a2
 {
 	//Initialisation
 	int c = 1000; //The size of the Array is a random number between 0 and C+1
@@ -28,12 +16,10 @@ int main()
 	srand(time(NULL));
 	int n;
 	int m;
-<<<<<<< HEAD
->>>>>>> 1a21ebb23621f882e321f83cf07f502bda1d45a2
-=======
->>>>>>> 1a21ebb23621f882e321f83cf07f502bda1d45a2
+
 	int I[n];
 	double duration;
+	double start;
 	
 
 	//User choice
