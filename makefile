@@ -16,5 +16,6 @@ run:
 prof: 
 	$(CCP) $(CFLAG) library/sorting.cpp test/random.cpp -o executable/runMe.exe
 	./executable/runMe.exe
-	gprof executable/runMe.exe gmon.out > analysis.txt
+	gprof executable/runMe.exe  gmon.out > analysis.txt
+
 

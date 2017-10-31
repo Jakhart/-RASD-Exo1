@@ -16,8 +16,10 @@ int main()
 	srand(time(NULL));
 	int n;
 	int m;
+
 	int I[n];
 	double duration;
+	double start;
 	
 
 	//User choice
