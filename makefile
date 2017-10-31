@@ -4,10 +4,6 @@ CFLAG=-pg -gdwarf-2
 compile:
 	$(CCP) library/sorting.cpp test/main.cpp -o executable/runMe.exe
 
-object:
-	$(CCP) -c library/sorting.cpp
-	$(CCP) -c test/main.cpp
-
 test:
 	$(CCP) library/sorting.cpp test/test.cpp -o executable/runMe.exe
 
